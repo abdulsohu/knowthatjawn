@@ -44,6 +44,18 @@ const NavBar = () => {
             </span>
           </a>
         </div>
+
+        <div className="column is-narrow">
+          <a
+            href="https://register.rockthevote.com/registrants/new?partner=36857"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="tag has-background-grey-dark has-text-white has-text-weight-bold">
+              Register To Vote
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   )

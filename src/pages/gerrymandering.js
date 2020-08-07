@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Maps = () => (
+const Gerrymandering = () => (
   <Layout>
     <SEO title="Gerrymandering"></SEO>
 
@@ -20,4 +20,4 @@ const Maps = () => (
   </Layout>
 )
 
-export default Maps
+export default Gerrymandering
