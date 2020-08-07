@@ -12,7 +12,7 @@ require("../styles/styles.scss")
 
 const Layout = ({ children }) => {
   return (
-    <section className="section" style={{ paddingTop: "1rem" }}>
+    <section className="section">
       <Helmet>
         <script
           type="module"
@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
           src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"
         ></script>
       </Helmet>
+
       <div className="container">
         <div className="columns">
           <div className="column is-one-fourth"></div>

@@ -14,6 +14,22 @@ const NavBar = () => {
         </div>
 
         <div className="column is-narrow">
+          <a href="/about">
+            <span className="tag has-background-grey-dark has-text-white has-text-weight-bold">
+              About
+            </span>
+          </a>
+        </div>
+
+        <div className="column is-narrow">
+          <a href="/gerrymandering">
+            <span className="tag has-background-grey-dark has-text-white has-text-weight-bold">
+              Gerrymandering
+            </span>
+          </a>
+        </div>
+
+        <div className="column is-narrow">
           <a href="/blog">
             <span className="tag has-background-grey-dark has-text-white has-text-weight-bold">
               Blog
@@ -22,17 +38,9 @@ const NavBar = () => {
         </div>
 
         <div className="column is-narrow">
-          <a href="/design">
+          <a href="/donate">
             <span className="tag has-background-grey-dark has-text-white has-text-weight-bold">
-              Design
-            </span>
-          </a>
-        </div>
-
-        <div className="column is-narrow">
-          <a href="/projects">
-            <span className="tag has-background-grey-dark has-text-white has-text-weight-bold">
-              Ideas
+              Donate
             </span>
           </a>
         </div>

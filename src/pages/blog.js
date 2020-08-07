@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Tag from "../components/blogTag"
 
-import WritingCreatures from "../images/blog.svg"
-
 const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark
 
@@ -14,19 +12,14 @@ const Blog = ({ data }) => {
     <Layout>
       <SEO title="Blog"></SEO>
 
-      <img
-        style={{ paddingTop: "0.5rem", paddingBottom: "2rem" }}
-        className="image is-square"
-        src={WritingCreatures}
-        alt="Writing from me and these creatures!"
-      />
+      <h1
+        className="title is-1"
+        style={{ marginTop: "1rem", color: "#79f9e3" }}
+      >
+        our writings.
+      </h1>
 
-      <h1 className="title is-2">some writing.</h1>
-
-      <p>
-        I like to write about interesting topics, things I care about, and
-        (sometimes) my personal life. All (good) opinions are mostly my own.
-      </p>
+      <p>We write about voting, and all things related.</p>
 
       <br />
 
@@ -36,35 +29,40 @@ const Blog = ({ data }) => {
           textAlign: "center",
         }}
       >
-        <strong style={{ borderBottom: "2px solid red" }}>all posts:</strong>
+        <strong style={{ borderBottom: "2px solid red", color: "white" }}>
+          all posts:
+        </strong>
       </p>
 
       {edges.map(edge => {
         const { frontmatter } = edge.node
         return (
-          <div
-            className="box"
-            key={frontmatter.path}
-            style={{ color: "grey", marginBottom: "1rem" }}
-          >
-            <span style={{ fontSize: "0.75rem" }}>{frontmatter.date} </span>
-            <br />
-            <Link to={frontmatter.path}>
-              <p>{frontmatter.title}</p>
-            </Link>
-            <p
-              style={{
-                fontSize: "0.85rem",
-                marginBottom: "0.5rem",
-                marginTop: "0.1rem",
-              }}
+          <Link to={frontmatter.path}>
+            <div
+              className="box"
+              key={frontmatter.path}
+              style={{ color: "grey", marginBottom: "1rem" }}
             >
-              {frontmatter.excerpt}
-            </p>
-            {frontmatter.tags.map((tag, index) => (
-              <Tag name={tag} key={index} />
-            ))}
-          </div>
+              <span style={{ fontSize: "0.75rem" }}>{frontmatter.date} </span>
+              <br />
+              <Link to={frontmatter.path}>
+                <p style={{ color: "black" }}>{frontmatter.title}</p>
+              </Link>
+              <p
+                style={{
+                  fontSize: "0.85rem",
+                  marginBottom: "0.5rem",
+                  marginTop: "0.1rem",
+                  color: "black",
+                }}
+              >
+                {frontmatter.excerpt}
+              </p>
+              {frontmatter.tags.map((tag, index) => (
+                <Tag name={tag} key={index} />
+              ))}
+            </div>
+          </Link>
         )
       })}
     </Layout>

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="level-left">
           <div className="level-item">
             <p className="is-size-6">
-              <strong>Thank you for reading!</strong>
+              <strong style={{ color: "white" }}>Thank you for reading!</strong>
             </p>
           </div>
         </div>
