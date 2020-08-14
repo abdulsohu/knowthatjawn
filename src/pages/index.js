@@ -14,6 +14,8 @@ const IndexPage = () => (
       know that jawn.
     </h1>
 
+    <p>Got only 3 minutes? Watch this:</p>
+
     <Video
       videoSrcURL="https://www.youtube.com/embed/bGLRJ12uqmk"
       videoTitle="Washington Post Explanation on Gerrymandering"
